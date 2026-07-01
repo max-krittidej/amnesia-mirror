@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\IfFontExistsTF{TH Sarabun New}{
+  \setmainfont{TH Sarabun New}
+}{
+  \IfFontExistsTF{TH SarabunPSK}{
+    \setmainfont{TH SarabunPSK}
+  }{
+    \IfFontExistsTF{Noto Serif Thai}{
+      \setmainfont{Noto Serif Thai}
+    }{
+      \setmainfont{Thonburi}
+    }
+  }
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\emergencystretch=4em
+\sloppy
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip=0pt plus 1pt
+\AtBeginDocument{\fontsize{16pt}{20pt}\selectfont}
+\renewcommand{\baselinestretch}{1.1}
+\setlist[itemize]{leftmargin=2.2em,itemsep=0.1em,topsep=0.1em,label=\textnormal{-}}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.4em,topsep=0.2em,label=\arabic*.}
+\titleformat{\section}{\bfseries\large}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0.6em}{0.2em}
+
+\newcommand{\placeholder}[1]{#1}
+\newcommand{\field}[1]{\textbf{#1}}
+
+\begin{document}
+
+\begin{minipage}[t]{0.26\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=0.65\linewidth]{assets/ncpd2026-logo.png}
+\end{minipage}
+\begin{minipage}[t]{0.70\textwidth}
+  \vspace{0pt}
+  \centering
+  Inclusive Design Challenge 2026\\
+  Innovation Competition: Inclusive Design Challenge 2026\\
+  Continuing Education Center, King Mongkut's University of Technology Thonburi\\
+  4 August 2026, Suralai Hall, ICONSIAM, Bangkok
+\end{minipage}
+
+\vspace{1.1em}
+\begin{center}
+  \textbf{\Large Round 1 Submission: Proposal / Concept Screening}
+\end{center}
+\vspace{0.5em}
+
+\begin{enumerate}
+  \input{sections/project-info}
+  \input{sections/intro}
+  \input{sections/objectives-users}
+  \input{sections/methods}
+  \input{sections/impact}
+  \input{sections/feasibility}
+  \input{sections/conclusion}
+\end{enumerate}
+
+\vfill
+\section*{Submission Notes}
+
+The official template allows submissions in Thai or English. The paper must be A4 size, use 1 inch margins on all sides, use TH SarabunPSK 16 pt unless otherwise specified, and be no longer than 10 pages. Keep all text, tables, diagrams, and images inside the page margins.
+
+\end{document}
