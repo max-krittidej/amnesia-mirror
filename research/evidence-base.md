@@ -56,6 +56,26 @@ job possible.
   technology for employment tasks, and **<9%** of vocational-rehab participants receive
   any AT service. Same under-provision exists in Thailand.
 
+## 3A. Feature surface to keep in the proposal
+The proposal should name concrete features, not only the prompting mechanism:
+- **Calendar and tasks:** day/time, appointments, daily checklist, medication schedule.
+- **Weather context:** weather panel translated into action cues ("bring umbrella",
+  "wear uniform/raincoat", "hot day: water bottle").
+- **Context features:** prompts chosen from schedule, weather, place/presence, last
+  completed step, and current routine.
+- **Remembering support:** family photos, short personal notes, and caregiver-authored
+  "stuff to remember" cards.
+- **Faces and names:** optional locally stored cards for familiar people; treat as a
+  privacy-sensitive prototype feature, not cloud face surveillance.
+- **Caregiver push messages:** one-way simple messages/reminders from family or job
+  coach, displayed at the right time/context.
+- **Logging:** done/delayed/skipped/help-needed completion log for caregiver review.
+- **Personalization:** preferred cue style, prompt level, routines, and completion
+  history are stored per user; prompt-fading adapts transparently from the log.
+- **MagicMirror role:** MagicMirror is the display shell for clock/calendar/weather/task
+  modules; MindMirror adds the assistive prompt engine, personalization, content packs,
+  and logging layer.
+
 ## 4. Why the innovation works (evidence AT helps)
 - **Meta-analysis (Morash-Macneil / PMC8115596):** applied cognitive technology improves
   employment-related outcomes for people with intellectual & developmental disability.

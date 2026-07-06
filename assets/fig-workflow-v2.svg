@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600">
+  <defs>
+    <style>
+      .title{font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;fill:#1f2529}
+      .step{font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:700;fill:#243039}
+      .body{font-family:Arial,Helvetica,sans-serif;font-size:22px;fill:#34424a}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:20px;fill:#5a646a}
+      .lane{font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:700;fill:#ffffff}
+    </style>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto">
+      <path d="M2,2 L14,8 L2,14 Z" fill="#47515a"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1600" fill="#ffffff"/>
+  <text x="800" y="62" text-anchor="middle" class="title">MindMirror user interaction workflow</text>
+
+  <rect x="70" y="115" width="1460" height="180" rx="18" fill="#f7fbff" stroke="#7ca5c4" stroke-width="3"/>
+  <rect x="70" y="115" width="190" height="180" rx="18" fill="#4d7796"/>
+  <text x="165" y="196" text-anchor="middle" class="lane">Caregiver</text>
+  <text x="165" y="228" text-anchor="middle" class="lane">setup</text>
+  <rect x="315" y="150" width="285" height="110" rx="16" fill="#ffffff" stroke="#9bb9cf" stroke-width="3"/>
+  <text x="458" y="190" text-anchor="middle" class="step">Create routine pack</text>
+  <text x="458" y="225" text-anchor="middle" class="body">steps, images, Thai text</text>
+  <text x="458" y="252" text-anchor="middle" class="small">meds, morning, work task</text>
+  <rect x="690" y="150" width="285" height="110" rx="16" fill="#ffffff" stroke="#9bb9cf" stroke-width="3"/>
+  <text x="833" y="190" text-anchor="middle" class="step">Set personal rules</text>
+  <text x="833" y="225" text-anchor="middle" class="body">schedule, prompt level,</text>
+  <text x="833" y="252" text-anchor="middle" class="small">voice/text preference</text>
+  <rect x="1065" y="150" width="285" height="110" rx="16" fill="#ffffff" stroke="#9bb9cf" stroke-width="3"/>
+  <text x="1208" y="190" text-anchor="middle" class="step">Approve privacy</text>
+  <text x="1208" y="225" text-anchor="middle" class="body">local video/audio,</text>
+  <text x="1208" y="252" text-anchor="middle" class="small">simple family controls</text>
+
+  <rect x="70" y="360" width="1460" height="340" rx="18" fill="#f9fcf7" stroke="#81aa80" stroke-width="3"/>
+  <rect x="70" y="360" width="190" height="340" rx="18" fill="#4c8450"/>
+  <text x="165" y="510" text-anchor="middle" class="lane">User</text>
+  <text x="165" y="542" text-anchor="middle" class="lane">routine</text>
+  <rect x="315" y="405" width="245" height="112" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="438" y="445" text-anchor="middle" class="step">Approaches mirror</text>
+  <text x="438" y="480" text-anchor="middle" class="body">presence trigger</text>
+  <rect x="625" y="405" width="245" height="112" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="748" y="445" text-anchor="middle" class="step">Checks context</text>
+  <text x="748" y="480" text-anchor="middle" class="body">time, routine, last step,</text>
+  <text x="748" y="507" text-anchor="middle" class="small">current prompt level</text>
+  <rect x="935" y="405" width="245" height="112" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="1058" y="445" text-anchor="middle" class="step">Shows next prompt</text>
+  <text x="1058" y="480" text-anchor="middle" class="body">large text, icon,</text>
+  <text x="1058" y="507" text-anchor="middle" class="small">spoken Thai cue</text>
+  <rect x="1245" y="405" width="245" height="112" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="1368" y="445" text-anchor="middle" class="step">User completes step</text>
+  <text x="1368" y="480" text-anchor="middle" class="body">confirm, repeat, or</text>
+  <text x="1368" y="507" text-anchor="middle" class="small">ask for help</text>
+
+  <rect x="470" y="570" width="300" height="96" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="620" y="608" text-anchor="middle" class="step">Completion is logged</text>
+  <text x="620" y="642" text-anchor="middle" class="body">done, delayed, skipped</text>
+  <rect x="850" y="570" width="300" height="96" rx="16" fill="#ffffff" stroke="#a5c8a4" stroke-width="3"/>
+  <text x="1000" y="608" text-anchor="middle" class="step">Prompt adapts</text>
+  <text x="1000" y="642" text-anchor="middle" class="body">fade down after success;</text>
+  <text x="1000" y="668" text-anchor="middle" class="small">step up if support needed</text>
+
+  <line x1="600" y1="205" x2="690" y2="205" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="975" y1="205" x2="1065" y2="205" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="458" y1="295" x2="438" y2="405" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="560" y1="461" x2="625" y2="461" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="870" y1="461" x2="935" y2="461" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1180" y1="461" x2="1245" y2="461" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1368" y1="517" x2="760" y2="592" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="770" y1="618" x2="850" y2="618" stroke="#47515a" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1000 570 C1000 535, 1000 528, 1058 517" stroke="#47515a" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="760" width="1460" height="120" rx="18" fill="#fff8ee" stroke="#c69754" stroke-width="3"/>
+  <rect x="70" y="760" width="190" height="120" rx="18" fill="#b98233"/>
+  <text x="165" y="812" text-anchor="middle" class="lane">Review</text>
+  <text x="165" y="844" text-anchor="middle" class="lane">and improve</text>
+  <text x="355" y="810" class="step">Caregiver / job coach sees a simple summary:</text>
+  <text x="355" y="848" class="body">which routines were completed, where help was needed, and which content pack should be adjusted.</text>
+  <path d="M620 666 C620 735, 620 735, 355 790" stroke="#47515a" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+</svg>

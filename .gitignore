@@ -5,19 +5,38 @@
 *.blg
 *.fdb_latexmk
 *.fls
+*.idv
+*.lg
 *.log
 *.out
 *.run.xml
 *.synctex.gz
+*.tmp
 *.toc
 *.xdv
+*.xref
+*.4as
+*.4ct
+*.4tc
 .texlive-cache/
 
 # Generated output
 main.pdf
+main.odt
+
+# Local draft/export scratch
+/draft 2.docx
+/draft 2.html
+/draft1.docx
+/draft1.pdf
+/mindmirror_proposal.docx
+/ncpd-proposal-round1-v2.docx
+/tools/build_draft2_docx.py
 
 # Editor and OS files
 .DS_Store
 *~
+~$*.docx
 *.swp
 *.swo
+*.4og

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600">
+  <defs>
+    <style>
+      .title{font-family:Arial,Helvetica,sans-serif;font-size:40px;font-weight:700;fill:#20262b}
+      .laneTitle{font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:700;fill:#fff}
+      .boxTitle{font-family:Arial,Helvetica,sans-serif;font-size:25px;font-weight:700;fill:#26323a}
+      .body{font-family:Arial,Helvetica,sans-serif;font-size:20px;fill:#46525a}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:18px;fill:#6a747b}
+      .note{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:700;fill:#4a5359}
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#58636b"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1600" fill="#fff"/>
+  <text x="800" y="58" text-anchor="middle" class="title">MindMirror system architecture</text>
+
+  <rect x="95" y="110" width="650" height="1090" rx="28" fill="#f6fbff" stroke="#7ea6c4" stroke-width="3"/>
+  <rect x="95" y="110" width="650" height="72" rx="28" fill="#4d7796"/>
+  <text x="420" y="157" text-anchor="middle" class="laneTitle">User and caregiver interaction</text>
+
+  <rect x="855" y="110" width="650" height="1090" rx="28" fill="#f8fcf7" stroke="#85aa83" stroke-width="3"/>
+  <rect x="855" y="110" width="650" height="72" rx="28" fill="#4c8450"/>
+  <text x="1180" y="157" text-anchor="middle" class="laneTitle">Local-first mirror system</text>
+
+  <g>
+    <rect x="190" y="245" width="460" height="115" rx="18" fill="#fff" stroke="#9bb9cf" stroke-width="3"/>
+    <text x="420" y="289" text-anchor="middle" class="boxTitle">Caregiver / job coach setup</text>
+    <text x="420" y="323" text-anchor="middle" class="body">creates routine packs and privacy settings</text>
+    <text x="420" y="350" text-anchor="middle" class="small">medication, morning routine, learning task, work task</text>
+
+    <rect x="190" y="455" width="460" height="115" rx="18" fill="#fff" stroke="#9bb9cf" stroke-width="3"/>
+    <text x="420" y="499" text-anchor="middle" class="boxTitle">User approaches mirror</text>
+    <text x="420" y="533" text-anchor="middle" class="body">no phone, app, wearable, or wake word required</text>
+    <text x="420" y="560" text-anchor="middle" class="small">support appears at the point of routine</text>
+
+    <rect x="190" y="665" width="460" height="115" rx="18" fill="#fff" stroke="#9bb9cf" stroke-width="3"/>
+    <text x="420" y="709" text-anchor="middle" class="boxTitle">Mirror gives the next prompt</text>
+    <text x="420" y="743" text-anchor="middle" class="body">large text, icon, and spoken Thai cue</text>
+    <text x="420" y="770" text-anchor="middle" class="small">confirm, repeat, or ask for help</text>
+
+    <rect x="190" y="875" width="460" height="115" rx="18" fill="#fff" stroke="#9bb9cf" stroke-width="3"/>
+    <text x="420" y="919" text-anchor="middle" class="boxTitle">Caregiver sees summary</text>
+    <text x="420" y="953" text-anchor="middle" class="body">completed, delayed, skipped, help needed</text>
+    <text x="420" y="980" text-anchor="middle" class="small">content can be adjusted without new software</text>
+  </g>
+
+  <g>
+    <rect x="950" y="245" width="460" height="115" rx="18" fill="#fff" stroke="#a4c7a3" stroke-width="3"/>
+    <text x="1180" y="289" text-anchor="middle" class="boxTitle">Content and settings</text>
+    <text x="1180" y="323" text-anchor="middle" class="body">caregiver-authored steps, schedules, preferences</text>
+    <text x="1180" y="350" text-anchor="middle" class="small">stored locally as content packs</text>
+
+    <rect x="950" y="455" width="460" height="115" rx="18" fill="#fff" stroke="#a4c7a3" stroke-width="3"/>
+    <text x="1180" y="499" text-anchor="middle" class="boxTitle">Presence and context layer</text>
+    <text x="1180" y="533" text-anchor="middle" class="body">camera presence, time, routine, last step</text>
+    <text x="1180" y="560" text-anchor="middle" class="small">knows what situation the user is in</text>
+
+    <rect x="950" y="665" width="460" height="115" rx="18" fill="#fff" stroke="#a4c7a3" stroke-width="3"/>
+    <text x="1180" y="709" text-anchor="middle" class="boxTitle">Prompt engine</text>
+    <text x="1180" y="743" text-anchor="middle" class="body">selects the next cue and prompt level</text>
+    <text x="1180" y="770" text-anchor="middle" class="small">text, icon, speech; full -> keyword -> icon -> none</text>
+
+    <rect x="950" y="875" width="460" height="115" rx="18" fill="#fff" stroke="#a4c7a3" stroke-width="3"/>
+    <text x="1180" y="919" text-anchor="middle" class="boxTitle">Completion log and prompt fading</text>
+    <text x="1180" y="953" text-anchor="middle" class="body">records outcomes and adapts support over time</text>
+    <text x="1180" y="980" text-anchor="middle" class="small">steps down after success; steps up when support is needed</text>
+  </g>
+
+  <line x1="420" y1="360" x2="420" y2="455" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="420" y1="570" x2="420" y2="665" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="420" y1="780" x2="420" y2="875" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <line x1="1180" y1="360" x2="1180" y2="455" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1180" y1="570" x2="1180" y2="665" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1180" y1="780" x2="1180" y2="875" stroke="#58636b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <path d="M650 302 C760 302, 840 302, 950 302" stroke="#7b858c" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="800" y="285" text-anchor="middle" class="small">routine data</text>
+
+  <path d="M950 722 C820 722, 780 722, 650 722" stroke="#7b858c" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="800" y="705" text-anchor="middle" class="small">selected prompt</text>
+
+  <path d="M650 932 C760 932, 840 932, 950 932" stroke="#7b858c" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="800" y="915" text-anchor="middle" class="small">completion result</text>
+
+  <rect x="95" y="1260" width="1410" height="180" rx="24" fill="#fff8ee" stroke="#c69754" stroke-width="3"/>
+  <rect x="125" y="1292" width="250" height="116" rx="18" fill="#b98233"/>
+  <text x="250" y="1340" text-anchor="middle" class="laneTitle">Software stack</text>
+  <text x="250" y="1374" text-anchor="middle" class="laneTitle">on device</text>
+
+  <rect x="430" y="1300" width="285" height="100" rx="15" fill="#fff" stroke="#d0aa70" stroke-width="2"/>
+  <text x="572" y="1334" text-anchor="middle" class="note">MagicMirror UI</text>
+  <text x="572" y="1368" text-anchor="middle" class="body">display panels</text>
+  <text x="572" y="1393" text-anchor="middle" class="small">custom prompt surface</text>
+
+  <rect x="770" y="1300" width="285" height="100" rx="15" fill="#fff" stroke="#d0aa70" stroke-width="2"/>
+  <text x="912" y="1334" text-anchor="middle" class="note">Speech services</text>
+  <text x="912" y="1368" text-anchor="middle" class="body">Piper TTS + Vosk ASR</text>
+  <text x="912" y="1393" text-anchor="middle" class="small">Thai-capable, offline</text>
+
+  <rect x="1110" y="1300" width="285" height="100" rx="15" fill="#fff" stroke="#d0aa70" stroke-width="2"/>
+  <text x="1252" y="1334" text-anchor="middle" class="note">Local storage</text>
+  <text x="1252" y="1368" text-anchor="middle" class="body">content packs</text>
+  <text x="1252" y="1393" text-anchor="middle" class="small">settings and logs</text>
+
+  <rect x="210" y="1490" width="1180" height="70" rx="18" fill="#fafafa" stroke="#9a9a9a" stroke-width="4" stroke-dasharray="14 10"/>
+  <text x="800" y="1535" text-anchor="middle" class="body">Privacy boundary: video/audio processing, prompt decisions, and routine logs stay local by default.</text>
+</svg>

@@ -8,6 +8,7 @@
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{multicol}
+\usepackage{xurl}
 \usepackage{hyperref}
 
 \IfFontExistsTF{TH Sarabun New}{
@@ -35,17 +36,17 @@
 }
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.28em}
+\setlength{\parskip}{0.18em}
 \emergencystretch=4em
 \sloppy
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip=0pt plus 1pt
-\AtBeginDocument{\fontsize{16pt}{20pt}\selectfont}
-\renewcommand{\baselinestretch}{1.05}
-\setlist[itemize]{leftmargin=2.2em,itemsep=0.1em,topsep=0.1em,label=\textnormal{-}}
-\setlist[enumerate]{leftmargin=2.2em,itemsep=0.4em,topsep=0.2em,label=\arabic*.}
+\AtBeginDocument{\fontsize{16pt}{18pt}\selectfont}
+\renewcommand{\baselinestretch}{1.0}
+\setlist[itemize]{leftmargin=1.8em,itemsep=0pt,topsep=0.05em,parsep=0pt,label=\textnormal{-}}
+\setlist[enumerate]{leftmargin=1.9em,itemsep=0.15em,topsep=0.1em,parsep=0pt,label=\arabic*.}
 \titleformat{\section}{\bfseries\large}{}{0pt}{}
-\titlespacing*{\section}{0pt}{0.6em}{0.2em}
+\titlespacing*{\section}{0pt}{0.35em}{0.1em}
 
 \newcommand{\placeholder}[1]{#1}
 \newcommand{\field}[1]{\textbf{#1}}
@@ -65,11 +66,11 @@
   4 August 2026, Suralai Hall, ICONSIAM, Bangkok
 \end{minipage}
 
-\vspace{0.6em}
+\vspace{0.35em}
 \begin{center}
   \textbf{\large Round 1 Submission: Proposal / Concept Screening}
 \end{center}
-\vspace{0.2em}
+\vspace{-0.1em}
 
 \begin{enumerate}
   \input{sections/project-info}

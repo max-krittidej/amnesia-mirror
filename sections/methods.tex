@@ -1,41 +1,148 @@
   \item \field{Innovation Details and Method}
 
-    \placeholder{Explain how the innovation works. This section should make the concept concrete enough for reviewers to understand the design, technology, workflow, and prototype plan.}
+    MindMirror is an ambient assistive smart mirror for people who forget routines,
+    lose their place in a sequence, or need context-specific prompts. One step-sequence
+    engine powers the whole product: with different content packs, it supports
+    \emph{living, learning, and earning}.
 
     \textbf{6.1 Design Approach}
-    \begin{itemize}
-      \item Inclusive Design / Universal Design principles applied in the project.
-      \item Accessibility Design decisions that support people with disabilities and other user groups.
-      \item Key user needs, constraints, and assumptions.
-    \end{itemize}
+
+    \textbf{The memory aid must not itself demand memory.} Phone and tablet aids must
+    be carried, charged, unlocked, and navigated; each step is a failure point for
+    users with impaired memory and executive function~[12, 13]. A mirror removes
+    those steps. It is fixed at a known point in the daily path, always present, and
+    non-medical in appearance.
+
+    \textbf{Context before cleverness.} MindMirror is not trying to be a general smart
+    speaker. Alexa or Google Home can say a reminder; MindMirror prioritises the
+    current context: where the user is, what routine is scheduled, what step was last
+    completed, and what level of help this person usually needs. That context lets the
+    device show the right prompt at the right moment instead of only answering a
+    command.
+
+    \textbf{Inclusive, multimodal, personalised.} Prompts appear as large text/icons
+    and are spoken aloud, with Thai as a first-class language requirement. Caregivers
+    configure routines; users are never expected to program the device. Personalisation
+    is practical rather than flashy: each routine has its own content pack, prompt
+    level, schedule, and completion history. The concept combines smart-mirror cognitive
+    support~[6, 7] with prompting systems that reduce assistance for daily tasks~[8].
 
     \textbf{6.2 Technology Used}
-    \begin{itemize}
-      \item Hardware and software components.
-      \item AI, IoT, mobile application, sensor, cloud, or other technical systems used.
-      \item Development tools, platforms, datasets, or models.
-    \end{itemize}
+
+    \textbf{Hardware --- commodity and costed.} MindMirror uses only off-the-shelf
+    parts: a two-way mirror over a display, Raspberry Pi compute hub, presence camera,
+    and microphone/speaker voice channel.
+
+    \begin{center}
+    {\footnotesize
+    \renewcommand{\arraystretch}{1.05}
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{0.22\linewidth} X r@{}}
+      \hline
+      Component & Role & Cost (THB) \\
+      \hline
+      Raspberry Pi 5 + power/storage & UI, engine, speech, logging & 3{,}500 \\
+      LCD/LED panel & Screen behind glass & 2{,}000 \\
+      Two-way acrylic mirror & Reflective surface & 600 \\
+      Camera module & Presence trigger & 600 \\
+      USB mic + speaker & Voice input/output & 800 \\
+      Frame, mount, wiring & Furniture-like installation & 1{,}000 \\
+      \hline
+      \textbf{Total (indicative)} & \textbf{Commodity, off-the-shelf} & \textbf{$\approx$ 8{,}500} \\
+      \hline
+    \end{tabularx}\\[0.3em]
+    \textbf{Table 1.} Bill of materials. Indicative retail prices in Thailand; a
+    repurposed monitor lowers the total further.
+    }
+    \end{center}
+
+    \textbf{Software --- integration, not invention.} The display layer uses
+    MagicMirror\textsuperscript{2}; speech uses on-device Thai-capable Piper TTS and
+    Vosk speech recognition. An MCP orchestration layer connects the interface, step
+    engine, completion log, and speech services. Routines and work tasks are content
+    packs, so new skills are authored as structured data rather than new software.
+    Video/audio remain local by default; any cloud fallback is optional~[14].
+
+    \textbf{Core feature set.} MagicMirror modules provide the familiar surface:
+    calendar, time/date, weather, and task panels. MindMirror adds three assistive
+    layers. \emph{Context features} turn the situation into action: ``what is next''
+    prompts, medication and appointment reminders, and weather-aware clothing cues such
+    as raincoat, uniform, or water bottle. \emph{Remembering features} show family
+    photos, personal memory cards, caregiver push messages, and optional local
+    face/name cards for familiar people. \emph{Personalisation features} store each
+    user's routines, preferred cue style, prompt level, and completion history. These
+    are context cards chosen by one prompt engine, with logs marked done, delayed,
+    skipped, or help needed.
 
     \textbf{6.3 System Workflow}
 
-    \placeholder{Add diagrams or supporting figures where useful.}
-    \begin{itemize}
-      \item System diagram.
-      \item Flowchart.
-      \item System architecture.
-      \item Prototype images.
-      \item User journey.
-    \end{itemize}
+    In normal use (Figure~1), the camera detects presence; the mirror shows time, day,
+    medication, appointment, or task prompts; the step engine walks the user through
+    one action at a time; completion is logged; and the log drives prompt-fading.
+
+    \begin{center}
+      \includegraphics[width=0.86\linewidth,trim=0 60bp 0 0,clip]{assets/preview-sysarch-v3.png}\\[-0.1em]
+      {\footnotesize \textbf{Figure 1.} System architecture --- a vertical split
+      between user/caregiver interaction and the local-first mirror system.}
+    \end{center}
+
+    \textbf{One engine, three states.} The same engine supports three easy-to-understand
+    states (Figure~2); what changes is the content pack, not the mechanism.
+
+    \begin{center}
+      \includegraphics[width=0.86\linewidth,trim=0 270bp 0 0,clip]{assets/preview-states-v2.png}\\[-0.1em]
+      {\footnotesize \textbf{Figure 2.} Three states using one step-sequence engine,
+      completion log, and prompt-fading rule.}
+    \end{center}
+
+    \emph{State 1 --- LIVING.} The mirror stabilises medication, orientation, calendar,
+    weather/clothing, messages, memory cues, and get-ready routines. Success: fewer
+    missed doses and faster routine completion.
+
+    \begin{center}
+      \includegraphics[width=0.58\linewidth]{assets/fig-ui-living.png}\\[-0.1em]
+      {\footnotesize \textbf{Figure 3.} Concept render of the LIVING screen --- a
+      Thai-language medication reminder with time, date, and a single confirm action,
+      shown as plain text and icons glowing through the mirror glass.}
+    \end{center}
+
+    \emph{State 2 --- LEARNING.} New routines begin with full support and fade as the
+    completion log records success (Table~2), following prompting evidence~[8, 11].
+
+    \begin{center}
+    {\footnotesize
+    \renewcommand{\arraystretch}{1.05}
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{0.12\linewidth} p{0.20\linewidth} X@{}}
+      \hline
+      Level & Prompt & What the user sees / hears \\
+      \hline
+      0 & Full & Speech + text + image \\
+      1 & Keyword & Short spoken cue + keyword \\
+      2 & Icon & Silent visual cue \\
+      3 & None & User completes unaided \\
+      \hline
+    \end{tabularx}\\[0.3em]
+    \textbf{Table 2.} Prompt-fading levels. The engine steps down after a
+    configured run of successful completions, and steps back up if completion drops.
+    }
+    \end{center}
+
+    \emph{State 3 --- EARNING.} The same engine runs workplace packs: packing an order,
+    a cleaning circuit, caf\'e prep, or folding. Success: independent completion of
+    trained work sequences~[9, 11].
+
+    \textbf{Prototype plan.} Round~1 targets the LIVING state end to end, demonstrates
+    prompt-fading on one learning routine, and loads one work-task pack.
 
     \textbf{6.4 Innovation Strengths}
 
-    \placeholder{Explain what makes the project different from existing solutions.}
     \begin{itemize}
-      \item Ease of use.
-      \item Affordability.
-      \item Support for multiple disability groups.
-      \item AI-assisted analysis or personalization.
-      \item Potential to increase employment or income opportunities.
+      \item \textbf{Ambient by design:} nothing to carry, open, or charge.
+      \item \textbf{Affordable and buildable:} about 8{,}500\,THB in commodity parts.
+      \item \textbf{Context and remembering:} schedule, weather, place, faces, photos,
+        memory cards, and last completed step all shape the prompt.
+      \item \textbf{One engine:} daily living, skill learning, and paid-task prompting.
+      \item \textbf{Cross-disability fit:} memory and executive-function support across
+        intellectual disability, brain injury, stroke, and early-onset dementia.
+      \item \textbf{Private personalisation:} preferred cue style, prompt level,
+        caregiver-authored routines, transparent fading, and local video/audio processing.
     \end{itemize}
-
-    \placeholder{Add tables, charts, prototype screenshots, or experimental results here if available.}

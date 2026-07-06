@@ -58,6 +58,12 @@ Confirmed real via Crossref (title + journal + year match):
 - Smart-mirror precedent: **L7 Kang 2025**, **L38 Dorado Chaparro 2021**, IoM concept **L15/L59 Fatima**.
 - Prompting design that works: context-aware/location-based beats fixed-time (L11, L12, L13); multimodal audio+visual preferred (L39); avoid menu depth / cognitive overload (L16, L40).
 - Workplace prompting precedent: **L46 Mihailidis N-CAPS** (factory assembly), L12/L45 Chang (vocational tasks).
+- Feature surface to state concretely: MagicMirror provides clock/calendar/weather/task
+  display modules; MindMirror adds medication and appointment prompts, weather-to-action
+  clothing cues, context-aware next-step prompts, family photos and memory cards,
+  optional local face/name cards, caregiver push messages, per-user personalization
+  (cue style, prompt level, routines, history), content packs, prompt-fading, and
+  completion logging.
 
 ### §7 Impact — mix real context stats with honestly-labelled targets
 | Impact claim | Backing | Source |
